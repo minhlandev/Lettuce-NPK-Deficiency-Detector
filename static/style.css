@@ -1,0 +1,109 @@
+body {
+    background: #f5f5fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Đổi từ row sang column */
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 20px; /* Giảm khoảng cách giữa các khối */
+}
+
+h1#heading {
+    color: #1ca97c;
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 10px; /* Giảm margin để gần bảng hơn */
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+form.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 18px 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ccc;
+    margin-bottom: 10px;
+    width: 350px;
+}
+
+#imagePreview {
+    display: block;
+    margin: 18px auto 10px auto;
+    max-width: 320px;
+    max-height: 240px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.btn {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.btn button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #1ca97c;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn button[type="reset"] {
+    background: #e74c3c;
+}
+
+.btn button:hover {
+    opacity: 0.9;
+}
+
+.result {
+    background-color: #fff;
+    margin-top: 0;
+    padding: 1em 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    text-align: left;
+    min-width: 440px;
+    max-width: 500px;
+}
+
+.result h2 {
+    margin: 0.7em 0;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.highlight {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .result, form.flex {
+        width: 95%;
+        min-width: unset;
+        max-width: unset;
+    }
+}
