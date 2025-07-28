@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Garden - Lettuce NPK Detector</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script defer src="/static/reset.js"></script>
+  <script defer src="/static/server.js"></script>
+</head>
+<body>
+  <div class="container flex">
+    <h1 id="heading">🥬 Lettuce NPK Deficiency Detector</h1>
+
+    <form class="flex" enctype="multipart/form-data">
+      <input id="imageInput" type="file" name="file" accept="image/*">
+      <img id="imagePreview" src="#" alt="Image Preview">
+      <div class="btn">
+        <button id="submit" type="submit">Predict</button>
+        <button type="reset" onclick="resetButton()">Reset</button>
+      </div>
+    </form>
+
+    <div class="result" id="resultContainer" style="display:none;">
+      <h2>🗓️ Date: <span id="date"></span></h2>
+      <h2>⏰ Time: <span id="time"></span></h2>
+      <h2>🧪 Prediction: <span class="highlight" id="prediction"></span></h2>
+      <h2>📌 Instruction: <span id="instruction"></span></h2>
+      <!-- <img id="boxedImage" src="#" alt="Boxed result" style="display:none;"> -->
+    </div>
+  </div>
+</body>
+</html>
